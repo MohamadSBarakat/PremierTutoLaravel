@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::view('/pass','welcome',['key'=>'content']);
+
+Route::view('about', 'front.about');
+
+Route::view('home', 'home');
+
+Route::get('user/{id}', function($id) {
+
+    return 'User Id : '.$id;
+});
+
+Route::get('user/profile', function() {
+
+    return view('user_profile');
+
+})->name('profile');
+
+//Route::post('main', 'mainController')->middleware('age');
+
